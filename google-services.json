@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "124642031762",
+    "firebase_url": "https://pushandopennotification-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pushandopennotification",
+    "storage_bucket": "pushandopennotification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124642031762:android:fbd9d88c1fa5fcdb594e4b",
+        "android_client_info": {
+          "package_name": "com.example.pushopennotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124642031762-9rt0rfp6sh6m41hkrtgo83n2f4jms02a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pushopennotification",
+            "certificate_hash": "b866f75db8a942535f5a83ecb99e465f3df4a012"
+          }
+        },
+        {
+          "client_id": "124642031762-mcpq07jlt594v8bo9ind03alja1c0t0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuVsUjO2qI2mKXfjKw1lUh6tQQE6g61Jg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124642031762-mcpq07jlt594v8bo9ind03alja1c0t0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
