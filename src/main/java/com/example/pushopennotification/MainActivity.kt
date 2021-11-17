@@ -12,21 +12,23 @@ import androidx.core.app.NotificationCompat
 class MainActivity : AppCompatActivity() {
 
     lateinit var recyclerbtn : Button
-
+    lateinit var socialbtn : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        socialbtn = findViewById(R.id.Social)
         recyclerbtn = findViewById(R.id.recyclerviewbtn)
         if(intent.extras != null){
-            var i = Intent(this,NotificationlistActivity::class.java)
+            var i = Intent(this,Social::class.java)
             startActivity(i)
-            finish()
+        }
+        socialbtn.setOnClickListener {
+            var i = Intent(this,Social::class.java)
+            startActivity(i)
         }
         recyclerbtn.setOnClickListener {
             var i = Intent(this,NotificationlistActivity::class.java)
             startActivity(i)
-            finish()
         }
     }
 }

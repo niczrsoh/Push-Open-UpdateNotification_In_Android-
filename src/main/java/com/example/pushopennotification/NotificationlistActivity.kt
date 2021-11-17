@@ -30,6 +30,14 @@ class NotificationlistActivity : AppCompatActivity() {
         notificationArrayList = arrayListOf<Notification>()
         getnotificationData()
 
+        val actionBar = supportActionBar
+        actionBar!!.title = "My notification"
+        actionBar.setDisplayHomeAsUpEnabled(true)
+        actionBar.setDisplayHomeAsUpEnabled(true)
+    }
+    override fun onSupportNavigateUp():Boolean{
+        onBackPressed()
+        return true
     }
     fun searchbrowser(message : String){
         var i = Intent(Intent.ACTION_VIEW, Uri.parse(message))
@@ -43,8 +51,6 @@ class NotificationlistActivity : AppCompatActivity() {
         dbref.addValueEventListener(object : ValueEventListener{
 
             override fun onDataChange(snapshot: DataSnapshot) {
-
-
                 if(snapshot.exists()) {
                     //remove all notification before any update
                     notificationArrayList.removeAll(notificationArrayList)
@@ -58,16 +64,9 @@ class NotificationlistActivity : AppCompatActivity() {
                     notificationRecyclerview.adapter = adapter
                     adapter.setonItemClickListener(object:MyAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            if (notificationArrayList[position].body.toString().contains("http")){
-                                searchbrowser(notificationArrayList[position].body.toString())}
-                                else {
-                                Toast.makeText(
-                                    this@NotificationlistActivity,
-                                    notificationArrayList[position].body,
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-
+                           val intent = Intent(this@NotificationlistActivity, Social::class.java)
+                            startActivity(intent)
+                            finish()
                         }
 
 

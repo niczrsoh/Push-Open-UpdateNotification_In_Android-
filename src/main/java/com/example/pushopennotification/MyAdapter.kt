@@ -32,14 +32,10 @@ class MyAdapter(private val notifList : ArrayList<Notification>) : RecyclerView.
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
-        val currentitem = notifList[position]
-
-        holder.title.text = currentitem.title
-        holder.body.text = currentitem.body
-
+        val notifitem = notifList[position]
+        holder.title.text = notifitem.title
+        holder.body.text = notifitem.body
     }
-
     override fun getItemCount(): Int {
 
         return notifList.size

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,13 +21,6 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Title: "
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvtitle"
@@ -35,6 +29,7 @@
                 android:layout_marginStart="8dp"
                 android:text="This is new title"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:textSize="18sp"/>
 
         </LinearLayout>
@@ -44,14 +39,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Body: "
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvbody"
